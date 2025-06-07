@@ -1,0 +1,19 @@
+figure + p {
+color: #94c258;
+}
+
+img {
+border: none;
+width: 500px;
+height: 300px;
+}
+div.article-content {
+margin: 15px 0;
+}
+nav {
+background: #355664;
+padding: 0 5px;
+}
+nav ul li {
+display: inline-block;
+}

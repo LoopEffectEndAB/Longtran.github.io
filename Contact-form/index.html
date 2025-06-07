@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <style>
+    body {
+      background-color: #f7f7f7;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #888;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .contact-box {
+      width: 400px;
+      background-color: #fff;
+      padding: 30px;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-box h2 {
+      font-size: 24px;
+      margin-bottom: 5px;
+      color: #666;
+    }
+
+    .contact-box p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      margin-top: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-family: inherit;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #e27575;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d25d5d;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-box">
+    <h2>Contact Form</h2>
+    <p>Please fill all the texts in the fields.</p>
+    <form>
+      <label for="name">Your Name :</label>
+      <input type="text" id="name" placeholder="Your Full Name" required />
+
+      <label for="email">Your Email :</label>
+      <input type="email" id="email" placeholder="Valid Email Address" required />
+
+      <label for="message">Message :</label>
+      <textarea id="message" placeholder="Your Message to Us" required></textarea>
+
+      <label for="subject">Subject :</label>
+      <select id="subject">
+        <option value="Job Inquiry">Job Inquiry</option>
+        <option value="Support">Support</option>
+        <option value="Feedback">Feedback</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+</html>

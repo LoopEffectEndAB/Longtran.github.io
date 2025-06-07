@@ -1,0 +1,39 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+h1 {
+    background-color: #ff6f61;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Toy Container */
+.toy {
+    display: inline-block;
+    background-color: white;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Toy Images */
+.toy img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+/* Toy Description */
+.toy p {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}

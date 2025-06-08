@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng ký | MixiShop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    header, footer {
+      padding: 20px;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      text-align: left;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .required::after {
+      content: " *";
+      color: red;
+    }
+
+    button {
+      background-color: #000;
+      color: white;
+      font-size: 16px;
+      padding: 12px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    footer {
+      background-color: #3ec2c2;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 40px 20px;
+    }
+
+    .footer-column {
+      width: 200px;
+      margin: 10px;
+    }
+
+    .footer-column h4 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .footer-column a, .footer-column p {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .newsletter input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .newsletter button {
+      width: 100%;
+      background: black;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .social-icons img {
+      width: 24px;
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>THÔNG TIN CÁ NHÂN</h2>
+    <form>
+      <label class="required">Họ</label>
+      <input type="text" placeholder="Họ" required>
+
+      <label class="required">Tên</label>
+      <input type="text" placeholder="Tên" required>
+
+      <label class="required">Số điện thoại</label>
+      <input type="text" placeholder="Số điện thoại" required>
+
+      <label class="required">Email</label>
+      <input type="email" placeholder="Email" required>
+
+      <label class="required">Mật khẩu</label>
+      <input type="password" placeholder="Mật khẩu" required>
+
+      <button type="submit">Đăng ký</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer-column">
+      <p>📍 Địa chỉ: Yên Lãng, Hà Nội</p>
+      <p>📞 Số điện thoại: 0822221992</p>
+      <p>📧 Email: Mixiishop@gmail.com</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>CHÍNH SÁCH</h4>
+      <p><a href="#">Trang chủ</a></p>
+      <p><a href="#">Giới thiệu</a></p>
+      <p><a href="#">Sản phẩm</a></p>
+      <p><a href="#">Blog</a></p>
+    </div>
+
+    <div class="footer-column">
+      <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+      <p><a href="#">Tìm kiếm</a></p>
+      <p><a href="#">Chính sách bảo mật</a></p>
+      <p><a href="#">Điều khoản dịch vụ</a></p>
+      <p><a href="#">Hướng dẫn kiểm tra đơn hàng</a></p>
+    </div>
+
+    <div class="footer-column newsletter">
+      <h4>ĐĂNG KÝ NHẬN TIN</h4>
+      <input type="email" placeholder="Nhập địa chỉ email">
+      <button>Đăng ký</button>
+      <div class="social-icons">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

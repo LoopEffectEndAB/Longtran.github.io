@@ -5,7 +5,895 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MixueShop - Home</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f6fafd;
+      margin: 0;
+      color: #222;
+    }
+    .main-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    /* ... giữ lại các style cần thiết ... */
+  </style>
+</head>
+<body>
+  <!--#include file="header.html" -->
+  <!--#include file="breadcrumb.html" -->
+  <script>document.querySelector('.breadcrumb .active span').textContent = 'Trang chủ';</script>
+  <main class="main-content">
+    <!-- Banner lớn: hiển thị ảnh home_tonhat.jpg đúng tỷ lệ -->
+    <section class="hero-banner" style="background:#e0f7fa; border-radius:18px; margin:32px 0 0 0; padding:0; text-align:center; box-shadow:0 4px 24px rgba(0,0,0,0.10); width:100vw; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; display:flex; align-items:center; justify-content:center;">
+      <img src="images/home_tonhat.jpg" alt="Banner MixueShop" style="width:100vw; height:auto; aspect-ratio:1107/670; border-radius:18px; box-shadow:0 4px 24px rgba(0,0,0,0.12); object-fit:cover; margin:0; display:block;" />
+    </section>
+    <!-- ... giữ lại các section nội dung ... -->
+  </main>
+  <!-- Footer chuẩn -->
+  <footer>
+    <div class="footer-column">
+      <p>📍 Address: Yen Lang, Ha Noi</p>
+      <p>📞 Phone: 0822221992</p>
+      <p>📧 Email: Mixueueshop@gmail.com</p>
+    </div>
+    <div class="footer-column">
+      <h4>POLICIES</h4>
+      <p><a href="HomePage.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="products.html">Products</a></p>
+      <p><a href="blog.html">Blog</a></p>
+      <p><a href="contact.html">Contact</a></p>
+      <p><a href="order.html">Order Lookup</a></p>
+    </div>
+    <div class="footer-column">
+      <h4>CUSTOMER SUPPORT</h4>
+      <p><a href="#">Search</a></p>
+      <p><a href="#">Privacy Policy</a></p>
+      <p><a href="#">Terms of Service</a></p>
+      <p><a href="#">Order Guide</a></p>
+    </div>
+    <div class="footer-column newsletter">
+      <h4>SUBSCRIBE</h4>
+      <input type="email" placeholder="Enter your email address">
+      <button>Subscribe</button>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" title="Facebook"><span>📘</span></a>
+        <a href="https://instagram.com" target="_blank" title="Instagram"><span>📸</span></a>
+        <a href="https://tiktok.com" target="_blank" title="TikTok"><span>🎵</span></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+    .main-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    .hero-banner {
+      background: linear-gradient(90deg, #4ec2c2 60%, #e0f7fa 100%);
+      color: #fff;
+      border-radius: 12px;
+      margin: 32px 0 24px 0;
+      padding: 48px 32px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .hero-banner h1 {
+      font-size: 2.8rem;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+    .hero-banner p {
+      font-size: 1.3rem;
+      margin-bottom: 0;
+    }
+    .about-section {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 32px 24px;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .about-section h2 {
+      color: #4ec2c2;
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    .about-section p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+    .featured-products {
+      margin-bottom: 32px;
+    }
+    .featured-title {
+      color: #4ec2c2;
+      font-size: 1.7rem;
+      margin-bottom: 18px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .products-list {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .product-card {
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 18px;
+      width: 220px;
+      text-align: center;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .product-card:hover {
+      box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+      transform: translateY(-4px) scale(1.04);
+    }
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .product-name {
+      margin: 12px 0 6px 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+    }
+    .product-price {
+      color: #4ec2c2;
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    .btn-detail {
+      background: #4ec2c2;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 18px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-detail:hover {
+      background: #369b9b;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .services-section {
+      background: #e0f7fa;
+      border-radius: 10px;
+      padding: 32px 24px;
+      margin-bottom: 32px;
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 18px;
+      width: 220px;
+      text-align: center;
+    }
+    .service-card h3 {
+      color: #4ec2c2;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+    .newsletter-section {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 32px 24px;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .newsletter-section input[type="email"] {
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      margin-right: 8px;
+      font-size: 1rem;
+      width: 220px;
+      max-width: 90%;
+    }
+    .newsletter-section button {
+      background: #4ec2c2;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 18px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .newsletter-section button:hover {
+      background: #369b9b;
+    }
+    .social-icons {
+      margin-top: 10px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+    .social-icons a {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #e0f7fa;
+      text-align: center;
+      line-height: 28px;
+      color: #4ec2c2;
+      font-size: 18px;
+      transition: background 0.2s;
+    }
+    .social-icons a:hover {
+      background: #4ec2c2;
+      color: #fff;
+    }
+    footer {
+      background: #f9f9f9;
+      padding: 32px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      border-top: 1px solid #e0f7fa;
+    }
+    .footer-column {
+      min-width: 220px;
+      max-width: 320px;
+      margin-bottom: 16px;
+    }
+    .footer-column h4 {
+      color: #4ec2c2;
+      margin-bottom: 10px;
+    }
+    .footer-column a {
+      color: #369b9b;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-column a:hover {
+      color: #4ec2c2;
+      text-decoration: underline;
+    }
+    @media (max-width: 700px) {
+      .main-content {
+        padding: 0 4px;
+      }
+      .hero-banner {
+        padding: 24px 8px;
+        font-size: 1.1rem;
+      }
+      .about-section, .newsletter-section {
+        padding: 18px 8px;
+      }
+      .services-section {
+        gap: 12px;
+        padding: 18px 8px;
+      }
+      .products-list {
+        gap: 16px;
+      }
+      .product-card, .service-card {
+        width: 100%;
+        max-width: 320px;
+      }
+      footer {
+        gap: 12px;
+        padding: 18px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-banner" style="background:#4ec2c2; color:#fff; text-align:center; padding:10px 0; font-size:1.1rem; font-weight:600; letter-spacing:1px;">OFFICIAL WEBSITE OF MIXUESHOP</div>
+  <header class="header" style="background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.07); padding:0;">
+    <div class="container" style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;">
+      <div class="logo" style="display:flex; align-items:center;">
+        <a href="HomePage.html"><img src="images/logo.png" alt="MixueShop Logo" style="height:54px;" /></a>
+      </div>
+      <nav class="nav-links" style="display:flex; gap:32px; align-items:center;">
+        <a href="HomePage.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; transition:background 0.2s;">Trang chủ</a>
+        <a href="Introduce.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; transition:background 0.2s;">Giới thiệu</a>
+        <div class="menu-item--has-submenu" style="position:relative;">
+          <a href="products.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; display:flex; align-items:center; gap:6px; transition:background 0.2s;">
+            <img src="images/menu_icon_3.png" alt="Sản phẩm" style="height:18px; vertical-align:middle; margin-right:2px;" />
+            Sản phẩm <span style="font-size:12px;">▼</span>
+          </a>
+          <ul class="submenu__list" style="position:absolute; left:0; top:100%; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.08); border-radius:8px; min-width:160px; display:none; z-index:10; padding:8px 0; margin-top:4px;">
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Đồ xuân hè</a></li>
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Đồ thu đông</a></li>
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Cốc bình</a></li>
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Lego</a></li>
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Giày dép</a></li>
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Đồ lưu niệm</a></li>
+          </ul>
+        </div>
+        <a href="blog.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; transition:background 0.2s;">Blog</a>
+        <a href="contact.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; transition:background 0.2s;">Liên hệ</a>
+        <a href="order.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; transition:background 0.2s;">Kiểm tra đơn hàng</a>
+      </nav>
+      <div class="header-right" style="display:flex; align-items:center; gap:18px;">
+        <a href="#" title="Tìm kiếm" style="color:#4ec2c2; font-size:22px; background:#e0f7fa; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; transition:background 0.2s;"><span>🔍</span></a>
+        <a href="Login.html" title="Tài khoản" style="color:#4ec2c2; font-size:22px; background:#e0f7fa; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; transition:background 0.2s;"><span>👤</span></a>
+        <a href="cart.html" title="Giỏ hàng" style="color:#4ec2c2; font-size:22px; background:#e0f7fa; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; position:relative; transition:background 0.2s;">
+          <span>🛒</span>
+          <span style="position:absolute; top:-6px; right:-6px; background:#ff5252; color:#fff; border-radius:50%; font-size:12px; padding:2px 6px;">0</span>
+        </a>
+        <a href="#" title="Yêu thích" style="color:#4ec2c2; font-size:22px; background:#e0f7fa; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; transition:background 0.2s;"><span>❤</span></a>
+      </div>
+    </div>
+    <script>
+      // Hiển thị submenu khi hover
+      document.addEventListener('DOMContentLoaded', function() {
+        var menuItem = document.querySelector('.menu-item--has-submenu');
+        var submenu = menuItem && menuItem.querySelector('.submenu__list');
+        if(menuItem && submenu) {
+          menuItem.addEventListener('mouseenter', function() {
+            submenu.style.display = 'block';
+          });
+          menuItem.addEventListener('mouseleave', function() {
+            submenu.style.display = 'none';
+          });
+        }
+      });
+    </script>
+  </header>
+  <main class="main-content">
+    <!-- Banner lớn: hiển thị ảnh home_tonhat.jpg đúng tỷ lệ -->
+    <section class="hero-banner" style="background:#e0f7fa; border-radius:18px; margin:32px 0 0 0; padding:0; text-align:center; box-shadow:0 4px 24px rgba(0,0,0,0.10); width:100vw; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; display:flex; align-items:center; justify-content:center;">
+      <img src="images/home_tonhat.jpg" alt="Banner MixueShop" style="width:100vw; height:auto; aspect-ratio:1107/670; border-radius:18px; box-shadow:0 4px 24px rgba(0,0,0,0.12); object-fit:cover; margin:0; display:block;" />
+    </section>
+
+    <!-- FLASH SALE: HÀNG HOT -->
+    <section class="flashsale-section" style="margin:40px 0 32px 0;">
+      <div class="container" style="max-width:1200px; margin:0 auto;">
+        <div class="flashsale__container border-0 p-0" style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08); padding:24px 18px;">
+          <div class="title_module_main heading-bar e-tabs d-flex justify-content-between align-items-center py-0 has-tabs" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+            <div class="d-flex align-items-center flex-wrap flashsale__header justify-content-between" style="display:flex; align-items:center; gap:18px;">
+              <div class="flash-sale-heading">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <h2 class="heading-bar__title flashsale__title m-0" style="font-size:2rem; color:#ff5252; font-weight:700; margin:0;">
+                    <a class="link" href="/collections/hot-products" title="HÀNG HOT" style="color:#ff5252; text-decoration:none; font-weight:700;">HÀNG HOT</a>
+                    <span class="ega-dot" style="display:inline-block; width:10px; height:10px; background:#ff5252; border-radius:50%; margin-left:6px; position:relative;"><span class="ega-ping" style="position:absolute; left:-6px; top:-6px; width:22px; height:22px; border-radius:50%; background:rgba(255,82,82,0.18); animation:ping 1.2s infinite;"></span></span>
+                  </h2>
+                  <img style="max-height:55px;" width="50" height="50" alt="HÀNG HOT" src="//theme.hstatic.net/200000881795/1001243022/14/flashsale-hot.png?v=167">
+                </div>
+              </div>
+              <div class="flashsale__countdown-wrapper" style="display:flex; align-items:center; gap:10px;">
+                <span class="flashsale__countdown-label" style="color:#888; font-size:1rem;">Kết thúc sau</span>
+                <div class="flashsale__countdown" style="display:flex; gap:8px; font-size:1.1rem; color:#ff5252;">
+                  <div style="display:flex; align-items:center; gap:4px;">
+                    <div style="background:#ffeaea; border-radius:6px; padding:4px 10px; font-weight:700;">06</div><span>Giờ</span>
+                  </div>
+                  <span style="font-weight:700;">:</span>
+                  <div style="display:flex; align-items:center; gap:4px;">
+                    <div style="background:#ffeaea; border-radius:6px; padding:4px 10px; font-weight:700;">49</div><span>Phút</span>
+                  </div>
+                  <span style="font-weight:700;">:</span>
+                  <div style="display:flex; align-items:center; gap:4px;">
+                    <div style="background:#ffeaea; border-radius:6px; padding:4px 10px; font-weight:700;">37</div><span>Giây</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flash-sale-tabs" style="margin-left:24px;">
+                <ul class="tabs tabs-title list-unstyled m-0 tabs-group d-flex align-items-center" style="display:flex; gap:18px; list-style:none; margin:0; padding:0;">
+                  <li class="ega-small tab-link px-3 link current" style="padding:8px 18px; background:#e0f7fa; border-radius:8px; color:#369b9b; font-weight:600; cursor:pointer;">Hàng mới về</li>
+                  <li class="ega-small tab-link px-3 linkml-2" style="padding:8px 18px; background:#f9f9f9; border-radius:8px; color:#369b9b; font-weight:600; cursor:pointer;">Năng động ngày hè</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- FLASH SALE PRODUCTS: Hàng mới về -->
+          <div class="e-tabs" style="margin-top:18px;">
+            <div id="tab-1" class="tab-content content_extab current">
+              <div class="row one-row" style="display:flex; gap:24px; overflow-x:auto; padding-bottom:8px;">
+                <!-- Product 1 -->
+                <div class="flashsale__item" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(255,82,82,0.08); width:210px; min-width:210px; text-align:center; padding:18px 8px; position:relative;">
+                  <a class="image_thumb" href="/products/coc-mu" title="Cốc mù" style="display:block;">
+                    <img class="img-fetured" width="180" height="180" src="//product.hstatic.net/200000881795/product/dsc08190_43e1801a6d5a4cd8908f986d35ec7f15_large.jpg" alt="Cốc mù" style="width:120px; height:120px; object-fit:cover; border-radius:10px; margin-bottom:10px;" />
+                  </a>
+                  <div class="product-name" style="font-size:1.08rem; font-weight:700; color:#ff5252; margin-bottom:4px;">Cốc mù</div>
+                  <div class="product-price" style="color:#369b9b; font-weight:700; margin-bottom:8px; font-size:1rem;">250,000₫</div>
+                  <button class="btn-detail" style="background:#ff5252; color:#fff; border:none; border-radius:6px; padding:8px 18px; font-size:15px; cursor:pointer; margin-bottom:6px;">Hết hàng</button>
+                  <a href="/products/coc-mu" class="btn-view" style="display:block; color:#369b9b; font-size:1rem; margin-bottom:4px;">Xem nhanh</a>
+                  <div class="flashsale__progressbar" style="margin-top:8px;">
+                    <div class="flashsale__label" style="color:#888; font-size:0.95rem;">Hết hàng</div>
+                    <div class="flashsale___percent" style="width:100%; height:6px; background:#ffeaea; border-radius:4px; margin-top:2px;"></div>
+                  </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="flashsale__item" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(255,82,82,0.08); width:210px; min-width:210px; text-align:center; padding:18px 8px; position:relative;">
+                  <a class="image_thumb" href="/products/bo-quan-ao-mixi-ni-da-ca-01-logo-trang" title="Bộ quần áo Mixi nỉ da cá 01 (logo trắng)" style="display:block;">
+                    <img class="img-fetured" width="180" height="180" src="//product.hstatic.net/200000881795/product/emptyname_12_6534bc1b36c14e909827d757e9f5d26a_large.png" alt="Bộ quần áo Mixi nỉ da cá 01 (logo trắng)" style="width:120px; height:120px; object-fit:cover; border-radius:10px; margin-bottom:10px;" />
+                  </a>
+                  <div class="product-name" style="font-size:1.08rem; font-weight:700; color:#ff5252; margin-bottom:4px;">Bộ quần áo Mixi nỉ da cá 01 (logo trắng)</div>
+                  <div class="product-price" style="color:#369b9b; font-weight:700; margin-bottom:8px; font-size:1rem;">520,000₫</div>
+                  <a href="/products/bo-quan-ao-mixi-ni-da-ca-01-logo-trang" class="btn-view" style="display:block; color:#369b9b; font-size:1rem; margin-bottom:4px;">Tùy chọn</a>
+                  <div class="flashsale__progressbar" style="margin-top:8px;">
+                    <div class="flashsale__label" style="color:#888; font-size:0.95rem;">Hết hàng</div>
+                    <div class="flashsale___percent" style="width:100%; height:6px; background:#ffeaea; border-radius:4px; margin-top:2px;"></div>
+                  </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="flashsale__item" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(255,82,82,0.08); width:210px; min-width:210px; text-align:center; padding:18px 8px; position:relative;">
+                  <a class="image_thumb" href="/products/bo-quan-ao-mixi-ni-da-ca-02-logo-do" title="Bộ quần áo Mixi nỉ da cá 02 (logo đỏ)" style="display:block;">
+                    <img class="img-fetured" width="180" height="180" src="//product.hstatic.net/200000881795/product/emptyname_3_842926c242a44a699fd0c9232459088f_large.png" alt="Bộ quần áo Mixi nỉ da cá 02 (logo đỏ)" style="width:120px; height:120px; object-fit:cover; border-radius:10px; margin-bottom:10px;" />
+                  </a>
+                  <div class="product-name" style="font-size:1.08rem; font-weight:700; color:#ff5252; margin-bottom:4px;">Bộ quần áo Mixi nỉ da cá 02 (logo đỏ)</div>
+                  <div class="product-price" style="color:#369b9b; font-weight:700; margin-bottom:8px; font-size:1rem;">520,000₫</div>
+                  <a href="/products/bo-quan-ao-mixi-ni-da-ca-02-logo-do" class="btn-view" style="display:block; color:#369b9b; font-size:1rem; margin-bottom:4px;">Tùy chọn</a>
+                  <div class="flashsale__progressbar" style="margin-top:8px;">
+                    <div class="flashsale__label" style="color:#ff5252; font-size:0.95rem; display:flex; align-items:center; gap:4px;"><img alt="fire-icon" src="//theme.hstatic.net/200000881795/1001243022/14/fire-icon.svg?v=167" style="height:16px; vertical-align:middle;" />Đã bán <b class="flashsale__sold-qty">890</b> sản phẩm</div>
+                    <div class="flashsale___percent" style="width:89%; height:6px; background:#ff5252; border-radius:4px; margin-top:2px;"></div>
+                  </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="flashsale__item" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(255,82,82,0.08); width:210px; min-width:210px; text-align:center; padding:18px 8px; position:relative;">
+                  <a class="image_thumb" href="/products/coc-mixi-1200ml" title="Cốc Mixi 1200ml" style="display:block;">
+                    <img class="img-fetured" width="180" height="180" src="//product.hstatic.net/200000881795/product/1_8f8cbe9be9e749ab9844309b1b753eac_large.png" alt="Cốc Mixi 1200ml" style="width:120px; height:120px; object-fit:cover; border-radius:10px; margin-bottom:10px;" />
+                  </a>
+                  <div class="product-name" style="font-size:1.08rem; font-weight:700; color:#ff5252; margin-bottom:4px;">Cốc Mixi 1200ml</div>
+                  <div class="product-price" style="color:#369b9b; font-weight:700; margin-bottom:8px; font-size:1rem;">250,000₫</div>
+                  <a href="/products/coc-mixi-1200ml" class="btn-view" style="display:block; color:#369b9b; font-size:1rem; margin-bottom:4px;">Tùy chọn</a>
+                  <div class="flashsale__progressbar" style="margin-top:8px;">
+                    <div class="flashsale__label" style="color:#888; font-size:0.95rem;">Hết hàng</div>
+                    <div class="flashsale___percent" style="width:100%; height:6px; background:#ffeaea; border-radius:4px; margin-top:2px;"></div>
+                  </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="flashsale__item" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(255,82,82,0.08); width:210px; min-width:210px; text-align:center; padding:18px 8px; position:relative;">
+                  <a class="image_thumb" href="/products/ao-khoac-ni" title="Áo khoác nỉ" style="display:block;">
+                    <img class="img-fetured" width="180" height="180" src="//product.hstatic.net/200000881795/product/_mg_8487_70da2e06afa3452badab33f14d6701c8_large.jpg" alt="Áo khoác nỉ" style="width:120px; height:120px; object-fit:cover; border-radius:10px; margin-bottom:10px;" />
+                  </a>
+                  <div class="product-name" style="font-size:1.08rem; font-weight:700; color:#ff5252; margin-bottom:4px;">Áo khoác nỉ</div>
+                  <div class="product-price" style="color:#369b9b; font-weight:700; margin-bottom:8px; font-size:1rem;">350,000₫</div>
+                  <a href="/products/ao-khoac-ni" class="btn-view" style="display:block; color:#369b9b; font-size:1rem; margin-bottom:4px;">Tùy chọn</a>
+                  <div class="flashsale__progressbar" style="margin-top:8px;">
+                    <div class="flashsale__label" style="color:#ff5252; font-size:0.95rem; display:flex; align-items:center; gap:4px;"><img alt="fire-icon" src="//theme.hstatic.net/200000881795/1001243022/14/fire-icon.svg?v=167" style="height:16px; vertical-align:middle;" />Đã bán <b class="flashsale__sold-qty">870</b> sản phẩm</div>
+                    <div class="flashsale___percent" style="width:87%; height:6px; background:#ff5252; border-radius:4px; margin-top:2px;"></div>
+                  </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="flashsale__item" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(255,82,82,0.08); width:210px; min-width:210px; text-align:center; padding:18px 8px; position:relative;">
+                  <a class="image_thumb" href="/products/moc-vit" title="Móc vịt" style="display:block;">
+                    <img class="img-fetured" width="180" height="180" src="//product.hstatic.net/200000881795/product/dsc08145_286829b75c63420080197cdf36ec2058_large.jpg" alt="Móc vịt" style="width:120px; height:120px; object-fit:cover; border-radius:10px; margin-bottom:10px;" />
+                  </a>
+                  <div class="product-name" style="font-size:1.08rem; font-weight:700; color:#ff5252; margin-bottom:4px;">Móc vịt</div>
+                  <div class="product-price" style="color:#369b9b; font-weight:700; margin-bottom:8px; font-size:1rem;">90,000₫</div>
+                  <a href="/products/moc-vit" class="btn-view" style="display:block; color:#369b9b; font-size:1rem; margin-bottom:4px;">Tùy chọn</a>
+                  <div class="flashsale__progressbar" style="margin-top:8px;">
+                    <div class="flashsale__label" style="color:#ff5252; font-size:0.95rem; display:flex; align-items:center; gap:4px;"><img alt="fire-icon" src="//theme.hstatic.net/200000881795/1001243022/14/fire-icon.svg?v=167" style="height:16px; vertical-align:middle;" />Đã bán <b class="flashsale__sold-qty">580</b> sản phẩm</div>
+                    <div class="flashsale___percent" style="width:58%; height:6px; background:#ff5252; border-radius:4px; margin-top:2px;"></div>
+                  </div>
+                </div>
+                <!-- Product 7 -->
+                <div class="flashsale__item" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(255,82,82,0.08); width:210px; min-width:210px; text-align:center; padding:18px 8px; position:relative;">
+                  <a class="image_thumb" href="/products/quan-dui-ni-01" title="Quần đùi nỉ 01" style="display:block;">
+                    <img class="img-fetured" width="180" height="180" src="//product.hstatic.net/200000881795/product/_mg_8513_3a101ecf96594130b3b705d95d720aea_large.jpg" alt="Quần đùi nỉ 01" style="width:120px; height:120px; object-fit:cover; border-radius:10px; margin-bottom:10px;" />
+                  </a>
+                  <div class="product-name" style="font-size:1.08rem; font-weight:700; color:#ff5252; margin-bottom:4px;">Quần đùi nỉ 01</div>
+                  <div class="product-price" style="color:#369b9b; font-weight:700; margin-bottom:8px; font-size:1rem;">190,000₫</div>
+                  <a href="/products/quan-dui-ni-01" class="btn-view" style="display:block; color:#369b9b; font-size:1rem; margin-bottom:4px;">Tùy chọn</a>
+                  <div class="flashsale__progressbar" style="margin-top:8px;">
+                    <div class="flashsale__label" style="color:#ff5252; font-size:0.95rem; display:flex; align-items:center; gap:4px;"><img alt="fire-icon" src="//theme.hstatic.net/200000881795/1001243022/14/fire-icon.svg?v=167" style="height:16px; vertical-align:middle;" />Đã bán <b class="flashsale__sold-qty">570</b> sản phẩm</div>
+                    <div class="flashsale___percent" style="width:57%; height:6px; background:#ff5252; border-radius:4px; margin-top:2px;"></div>
+                  </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="flashsale__item" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(255,82,82,0.08); width:210px; min-width:210px; text-align:center; padding:18px 8px; position:relative;">
+                  <a class="image_thumb" href="/products/quan-dui-ni-02" title="Quần đùi nỉ 02" style="display:block;">
+                    <img class="img-fetured" width="180" height="180" src="//product.hstatic.net/200000881795/product/_mg_8528_73f1a09a012e4c65aeae230a11d02fd0_large.jpg" alt="Quần đùi nỉ 02" style="width:120px; height:120px; object-fit:cover; border-radius:10px; margin-bottom:10px;" />
+                  </a>
+                  <div class="product-name" style="font-size:1.08rem; font-weight:700; color:#ff5252; margin-bottom:4px;">Quần đùi nỉ 02</div>
+                  <div class="product-price" style="color:#369b9b; font-weight:700; margin-bottom:8px; font-size:1rem;">190,000₫</div>
+                  <a href="/products/quan-dui-ni-02" class="btn-view" style="display:block; color:#369b9b; font-size:1rem; margin-bottom:4px;">Tùy chọn</a>
+                  <div class="flashsale__progressbar" style="margin-top:8px;">
+                    <div class="flashsale__label" style="color:#ff5252; font-size:0.95rem; display:flex; align-items:center; gap:4px;"><img alt="fire-icon" src="//theme.hstatic.net/200000881795/1001243022/14/fire-icon.svg?v=167" style="height:16px; vertical-align:middle;" />Đã bán <b class="flashsale__sold-qty">900</b> sản phẩm</div>
+                    <div class="flashsale___percent" style="width:90%; height:6px; background:#ff5252; border-radius:4px; margin-top:2px;"></div>
+                  </div>
+                </div>
+                <!-- Product 9 -->
+                <div class="flashsale__item" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(255,82,82,0.08); width:210px; min-width:210px; text-align:center; padding:18px 8px; position:relative;">
+                  <a class="image_thumb" href="/products/ao-sologan-mixigaming-2024" title="Áo Sologan MixiGaming 2024" style="display:block;">
+                    <img class="img-fetured" width="180" height="180" src="//product.hstatic.net/200000881795/product/1_e9362a83fc0246d78bb828760f1798f7_large.png" alt="Áo Sologan MixiGaming 2024" style="width:120px; height:120px; object-fit:cover; border-radius:10px; margin-bottom:10px;" />
+                  </a>
+                  <div class="product-name" style="font-size:1.08rem; font-weight:700; color:#ff5252; margin-bottom:4px;">Áo Sologan MixiGaming 2024</div>
+                  <div class="product-price" style="color:#369b9b; font-weight:700; margin-bottom:8px; font-size:1rem;">250,000₫</div>
+                  <a href="/products/ao-sologan-mixigaming-2024" class="btn-view" style="display:block; color:#369b9b; font-size:1rem; margin-bottom:4px;">Tùy chọn</a>
+                  <div class="flashsale__progressbar" style="margin-top:8px;">
+                    <div class="flashsale__label" style="color:#ff5252; font-size:0.95rem; display:flex; align-items:center; gap:4px;"><img alt="fire-icon" src="//theme.hstatic.net/200000881795/1001243022/14/fire-icon.svg?v=167" style="height:16px; vertical-align:middle;" />Đã bán <b class="flashsale__sold-qty">890</b> sản phẩm</div>
+                    <div class="flashsale___percent" style="width:89%; height:6px; background:#ff5252; border-radius:4px; margin-top:2px;"></div>
+                  </div>
+                </div>
+                <!-- Product 10 -->
+                <div class="flashsale__item" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(255,82,82,0.08); width:210px; min-width:210px; text-align:center; padding:18px 8px; position:relative;">
+                  <a class="image_thumb" href="/products/ao-logo-2023" title="Áo logo 2023" style="display:block;">
+                    <img class="img-fetured" width="180" height="180" src="//product.hstatic.net/200000881795/product/1_1802821908194d829976769cb46962ca_large.png" alt="Áo logo 2023" style="width:120px; height:120px; object-fit:cover; border-radius:10px; margin-bottom:10px;" />
+                  </a>
+                  <div class="product-name" style="font-size:1.08rem; font-weight:700; color:#ff5252; margin-bottom:4px;">Áo logo 2023</div>
+                  <div class="product-price" style="color:#369b9b; font-weight:700; margin-bottom:8px; font-size:1rem;">250,000₫</div>
+                  <a href="/products/ao-logo-2023" class="btn-view" style="display:block; color:#369b9b; font-size:1rem; margin-bottom:4px;">Tùy chọn</a>
+                  <div class="flashsale__progressbar" style="margin-top:8px;">
+                    <div class="flashsale__label" style="color:#ff5252; font-size:0.95rem; display:flex; align-items:center; gap:4px;"><img alt="fire-icon" src="//theme.hstatic.net/200000881795/1001243022/14/fire-icon.svg?v=167" style="height:16px; vertical-align:middle;" />Đã bán <b class="flashsale__sold-qty">770</b> sản phẩm</div>
+                    <div class="flashsale___percent" style="width:77%; height:6px; background:#ff5252; border-radius:4px; margin-top:2px;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center mt-3 col-12" style="margin-top:18px; text-align:center;">
+                <a href="/collections/hot-products" title="Xem tất cả" class="btn btn-main btn-icon" style="background:#ff5252; color:#fff; border-radius:8px; padding:10px 28px; font-size:1.1rem; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
+                  Xem tất cả
+                  <svg class="icon" style="width:22px; height:22px; fill:#fff; vertical-align:middle;"><use xlink:href="#icon-arrow"></use></svg>
+                </a>
+              </div>
+            </div>
+            <!-- Tab 2: Năng động ngày hè (chỉ demo, không sản phẩm) -->
+            <div id="tab-2" class="tab-content content_extab" style="display:none;">
+              <div class="row one-row" style="display:flex; gap:24px; overflow-x:auto; padding-bottom:8px;">
+                <!-- Demo sản phẩm tab 2 -->
+                <div class="flashsale__item" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(255,82,82,0.08); width:210px; min-width:210px; text-align:center; padding:18px 8px; position:relative;">
+                  <a class="image_thumb" href="/products/ao-3-lo-mixi-mat-logo-mixi" title="Áo 3 lỗ Mixi (mặt logo Mixi)" style="display:block;">
+                    <img class="img-fetured" width="180" height="180" src="//product.hstatic.net/200000881795/product/sp_800x1200_27a0d0ba6da14a67b3b222efef98c8b9_large.png" alt="Áo 3 lỗ Mixi (mặt logo Mixi)" style="width:120px; height:120px; object-fit:cover; border-radius:10px; margin-bottom:10px;" />
+                  </a>
+                  <div class="product-name" style="font-size:1.08rem; font-weight:700; color:#ff5252; margin-bottom:4px;">Áo 3 lỗ Mixi (mặt logo Mixi)</div>
+                  <div class="product-price" style="color:#369b9b; font-weight:700; margin-bottom:8px; font-size:1rem;">99,000₫</div>
+                  <a href="/products/ao-3-lo-mixi-mat-logo-mixi" class="btn-view" style="display:block; color:#369b9b; font-size:1rem; margin-bottom:4px;">Tùy chọn</a>
+                  <div class="flashsale__progressbar" style="margin-top:8px;">
+                    <div class="flashsale__label" style="color:#888; font-size:0.95rem;">Hết hàng</div>
+                    <div class="flashsale___percent" style="width:100%; height:6px; background:#ffeaea; border-radius:4px; margin-top:2px;"></div>
+                  </div>
+                </div>
+                <!-- ...các sản phẩm khác tab 2... -->
+              </div>
+              <div class="text-center mt-3 col-12" style="margin-top:18px; text-align:center;">
+                <a href="/collections/do-xuan-he" title="Xem tất cả" class="btn btn-main btn-icon" style="background:#ff5252; color:#fff; border-radius:8px; padding:10px 28px; font-size:1.1rem; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
+                  Xem tất cả
+                  <svg class="icon" style="width:22px; height:22px; fill:#fff; vertical-align:middle;"><use xlink:href="#icon-arrow"></use></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        @keyframes ping { 0% { opacity:1; transform:scale(1); } 80% { opacity:0; transform:scale(2.2); } 100% { opacity:0; transform:scale(2.2); } }
+        .flashsale-section::-webkit-scrollbar { height:8px; background:#e0f7fa; }
+        .flashsale-section::-webkit-scrollbar-thumb { background:#ff5252; border-radius:8px; }
+      </style>
+      <script>
+        // Tab switching logic
+        document.addEventListener('DOMContentLoaded', function() {
+          var tabLinks = document.querySelectorAll('.flash-sale-tabs .tab-link');
+          var tabContents = [document.getElementById('tab-1'), document.getElementById('tab-2')];
+          tabLinks.forEach(function(link, idx) {
+            link.addEventListener('click', function() {
+              tabLinks.forEach(function(l){ l.classList.remove('current'); l.style.background = '#f9f9f9'; });
+              link.classList.add('current'); link.style.background = '#e0f7fa';
+              tabContents.forEach(function(c, i){ c.style.display = (i === idx) ? 'block' : 'none'; });
+            });
+          });
+        });
+      </script>
+    </section>
+
+    <!-- ĐỒ HIỆU MIXI Section -->
+    <section class="mixi-collection" style="margin-bottom:40px;">
+      <div class="container card border-0" style="max-width:1200px; margin:0 auto;">
+        <h2 class="heading-bar__title" style="font-size:2rem; color:#4ec2c2; text-align:center; font-weight:700; margin-bottom:24px;">ĐỒ HIỆU MIXI</h2>
+        <div class="ss_body" style="overflow-x:auto;">
+          <div class="row mx-0 hrz-scroll flex-nowrap" style="display:flex; gap:24px; justify-content:center; align-items:stretch;">
+            <!-- Item 1 -->
+            <div class="ss_item style2" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,0.08); width:185px; min-width:185px; text-align:center; padding:18px 8px;">
+              <a href="/collections/do-xuan-he" style="text-decoration:none; color:inherit;">
+                <div class="ss_img" style="margin-bottom:12px;">
+                  <img class="img-fluid m-auto object-contain mh-100 w-auto" src="//theme.hstatic.net/200000881795/1001243022/14/season_coll_1_img_large.png?v=167" width="200" height="200" alt="season_coll_1_img.png" style="width:120px; height:120px; object-fit:contain; border-radius:10px;" />
+                </div>
+                <div class="ss_info">
+                  <div class="ss_name" style="font-size:1.1rem; font-weight:700; color:#4ec2c2;">Đồ xuân hè</div>
+                  <span class="ss_number" style="color:#888; font-size:0.98rem;">21 sản phẩm</span>
+                  <div class="ss_seemore" style="margin-top:8px;">
+                    <span style="color:#369b9b; font-size:1.1rem;">→</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Item 2 -->
+            <div class="ss_item style2" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,0.08); width:185px; min-width:185px; text-align:center; padding:18px 8px;">
+              <a href="/collections/do-thu-dong" style="text-decoration:none; color:inherit;">
+                <div class="ss_img" style="margin-bottom:12px;">
+                  <img class="img-fluid m-auto object-contain mh-100 w-auto" src="//theme.hstatic.net/200000881795/1001243022/14/season_coll_3_img_large.png?v=167" width="200" height="200" alt="season_coll_3_img.png" style="width:120px; height:120px; object-fit:contain; border-radius:10px;" />
+                </div>
+                <div class="ss_info">
+                  <div class="ss_name" style="font-size:1.1rem; font-weight:700; color:#4ec2c2;">Đồ thu đông</div>
+                  <span class="ss_number" style="color:#888; font-size:0.98rem;">8 sản phẩm</span>
+                  <div class="ss_seemore" style="margin-top:8px;">
+                    <span style="color:#369b9b; font-size:1.1rem;">→</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Item 3 -->
+            <div class="ss_item style2" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,0.08); width:185px; min-width:185px; text-align:center; padding:18px 8px;">
+              <a href="/collections/coc-binh" style="text-decoration:none; color:inherit;">
+                <div class="ss_img" style="margin-bottom:12px;">
+                  <img class="img-fluid m-auto object-contain mh-100 w-auto" src="//theme.hstatic.net/200000881795/1001243022/14/season_coll_4_img_large.png?v=167" width="200" height="200" alt="season_coll_4_img.png" style="width:120px; height:120px; object-fit:contain; border-radius:10px;" />
+                </div>
+                <div class="ss_info">
+                  <div class="ss_name" style="font-size:1.1rem; font-weight:700; color:#4ec2c2;">Cốc bình</div>
+                  <span class="ss_number" style="color:#888; font-size:0.98rem;">7 sản phẩm</span>
+                  <div class="ss_seemore" style="margin-top:8px;">
+                    <span style="color:#369b9b; font-size:1.1rem;">→</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Item 4 -->
+            <div class="ss_item style2" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,0.08); width:185px; min-width:185px; text-align:center; padding:18px 8px;">
+              <a href="/collections/lego" style="text-decoration:none; color:inherit;">
+                <div class="ss_img" style="margin-bottom:12px;">
+                  <img class="img-fluid m-auto object-contain mh-100 w-auto" src="//theme.hstatic.net/200000881795/1001243022/14/season_coll_5_img_large.png?v=167" width="200" height="200" alt="season_coll_5_img.png" style="width:120px; height:120px; object-fit:contain; border-radius:10px;" />
+                </div>
+                <div class="ss_info">
+                  <div class="ss_name" style="font-size:1.1rem; font-weight:700; color:#4ec2c2;">Lego</div>
+                  <span class="ss_number" style="color:#888; font-size:0.98rem;">9 sản phẩm</span>
+                  <div class="ss_seemore" style="margin-top:8px;">
+                    <span style="color:#369b9b; font-size:1.1rem;">→</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Item 5 -->
+            <div class="ss_item style2" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,0.08); width:185px; min-width:185px; text-align:center; padding:18px 8px;">
+              <a href="/collections/giay-dep" style="text-decoration:none; color:inherit;">
+                <div class="ss_img" style="margin-bottom:12px;">
+                  <img class="img-fluid m-auto object-contain mh-100 w-auto" src="//theme.hstatic.net/200000881795/1001243022/14/season_coll_6_img_large.png?v=167" width="200" height="200" alt="season_coll_6_img.png" style="width:120px; height:120px; object-fit:contain; border-radius:10px;" />
+                </div>
+                <div class="ss_info">
+                  <div class="ss_name" style="font-size:1.1rem; font-weight:700; color:#4ec2c2;">Giày dép</div>
+                  <span class="ss_number" style="color:#888; font-size:0.98rem;">1 sản phẩm</span>
+                  <div class="ss_seemore" style="margin-top:8px;">
+                    <span style="color:#369b9b; font-size:1.1rem;">→</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Item 6 -->
+            <div class="ss_item style2" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,0.08); width:185px; min-width:185px; text-align:center; padding:18px 8px;">
+              <a href="/collections/do-luu-niem" style="text-decoration:none; color:inherit;">
+                <div class="ss_img" style="margin-bottom:12px;">
+                  <img class="img-fluid m-auto object-contain mh-100 w-auto" src="//theme.hstatic.net/200000881795/1001243022/14/season_coll_7_img_large.png?v=167" width="200" height="200" alt="season_coll_7_img.png" style="width:120px; height:120px; object-fit:contain; border-radius:10px;" />
+                </div>
+                <div class="ss_info">
+                  <div class="ss_name" style="font-size:1.1rem; font-weight:700; color:#4ec2c2;">Đồ lưu niệm</div>
+                  <span class="ss_number" style="color:#888; font-size:0.98rem;">3 sản phẩm</span>
+                  <div class="ss_seemore" style="margin-top:8px;">
+                    <span style="color:#369b9b; font-size:1.1rem;">→</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Policies Section -->
+    <section class="policies-body" style="display:flex; gap:32px; justify-content:center; align-items:stretch; margin:32px 0 32px 0; flex-wrap:wrap;">
+      <div class="policies-item" style="background:#fff; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.07); display:flex; align-items:center; gap:18px; padding:18px 28px; min-width:220px; max-width:320px; flex:1;">
+        <div class="policies-image">
+          <img src="//theme.hstatic.net/200000881795/1001243022/14/policies_icon_1.png?v=167" alt="Vận chuyển toàn quốc" width="40" height="40" style="border-radius:8px;" />
+        </div>
+        <div class="policies-info">
+          <h3 class="policies-title" style="font-size:1.1rem; color:#4ec2c2; margin:0 0 6px 0; font-weight:700;">Vận chuyển toàn quốc</h3>
+          <div class="policies-desc" style="color:#444; font-size:0.98rem;">Vận chuyển nhanh chóng</div>
+        </div>
+      </div>
+      <div class="policies-item" style="background:#fff; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.07); display:flex; align-items:center; gap:18px; padding:18px 28px; min-width:220px; max-width:320px; flex:1;">
+        <div class="policies-image">
+          <img src="//theme.hstatic.net/200000881795/1001243022/14/policies_icon_2.png?v=167" alt="Ưu đãi hấp dẫn" width="40" height="40" style="border-radius:8px;" />
+        </div>
+        <div class="policies-info">
+          <h3 class="policies-title" style="font-size:1.1rem; color:#4ec2c2; margin:0 0 6px 0; font-weight:700;">Ưu đãi hấp dẫn</h3>
+          <div class="policies-desc" style="color:#444; font-size:0.98rem;">Nhiều ưu đãi khuyến mãi hot</div>
+        </div>
+      </div>
+      <div class="policies-item" style="background:#fff; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.07); display:flex; align-items:center; gap:18px; padding:18px 28px; min-width:220px; max-width:320px; flex:1;">
+        <div class="policies-image">
+          <img src="//theme.hstatic.net/200000881795/1001243022/14/policies_icon_3.png?v=167" alt="Bảo đảm chất lượng" width="40" height="40" style="border-radius:8px;" />
+        </div>
+        <div class="policies-info">
+          <h3 class="policies-title" style="font-size:1.1rem; color:#4ec2c2; margin:0 0 6px 0; font-weight:700;">Bảo đảm chất lượng</h3>
+          <div class="policies-desc" style="color:#444; font-size:0.98rem;">Sản phẩm đã được kiểm định</div>
+        </div>
+      </div>
+      <div class="policies-item" style="background:#fff; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.07); display:flex; align-items:center; gap:18px; padding:18px 28px; min-width:220px; max-width:320px; flex:1;">
+        <div class="policies-image">
+          <img src="//theme.hstatic.net/200000881795/1001243022/14/policies_icon_4.png?v=167" alt="Hotline" width="40" height="40" style="border-radius:8px;" />
+        </div>
+        <div class="policies-info">
+          <h3 class="policies-title" style="font-size:1.1rem; color:#4ec2c2; margin:0 0 6px 0; font-weight:700;">Hotline: 0822221992</h3>
+          <div class="policies-desc" style="color:#444; font-size:0.98rem;">Vui lòng gọi hotline để hỗ trợ</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-products" style="margin-bottom:40px;">
+      <h3 class="featured-title" style="font-size:2rem; color:#4ec2c2; margin-bottom:28px; text-align:center; font-weight:700;">Sản phẩm nổi bật</h3>
+      <div class="products-list" style="display:flex; gap:40px; flex-wrap:wrap; justify-content:center;">
+        <div class="product-card" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,0.08); padding:22px; width:240px; text-align:center; transition:box-shadow 0.2s, transform 0.2s;">
+          <img src="images/product1.jpg" alt="Mixue T-shirt" style="width:100%; height:160px; object-fit:cover; border-radius:10px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.06);" />
+          <div class="product-name" style="margin:14px 0 8px 0; font-size:20px; font-weight:700; color:#333;">Mixue T-shirt</div>
+          <div class="product-price" style="color:#4ec2c2; font-weight:700; margin-bottom:12px; font-size:18px;">250,000₫</div>
+          <button class="btn-detail" style="background:#4ec2c2; color:#fff; border:none; border-radius:6px; padding:10px 22px; font-size:16px; cursor:pointer; transition:background 0.2s, transform 0.2s;" onclick="location.href='products.html'">Mua ngay</button>
+        </div>
+        <div class="product-card" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,0.08); padding:22px; width:240px; text-align:center; transition:box-shadow 0.2s, transform 0.2s;">
+          <img src="images/product2.jpg" alt="Mixue Pants" style="width:100%; height:160px; object-fit:cover; border-radius:10px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.06);" />
+          <div class="product-name" style="margin:14px 0 8px 0; font-size:20px; font-weight:700; color:#333;">Mixue Jogger Pants</div>
+          <div class="product-price" style="color:#4ec2c2; font-weight:700; margin-bottom:12px; font-size:18px;">400,000₫</div>
+          <button class="btn-detail" style="background:#4ec2c2; color:#fff; border:none; border-radius:6px; padding:10px 22px; font-size:16px; cursor:pointer; transition:background 0.2s, transform 0.2s;" onclick="location.href='products.html'">Mua ngay</button>
+        </div>
+        <div class="product-card" style="background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,0.08); padding:22px; width:240px; text-align:center; transition:box-shadow 0.2s, transform 0.2s;">
+          <img src="images/product3.jpg" alt="Accessories" style="width:100%; height:160px; object-fit:cover; border-radius:10px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.06);" />
+          <div class="product-name" style="margin:14px 0 8px 0; font-size:20px; font-weight:700; color:#333;">Accessories</div>
+          <div class="product-price" style="color:#4ec2c2; font-weight:700; margin-bottom:12px; font-size:18px;">120,000₫</div>
+          <button class="btn-detail" style="background:#4ec2c2; color:#fff; border:none; border-radius:6px; padding:10px 22px; font-size:16px; cursor:pointer; transition:background 0.2s, transform 0.2s;" onclick="location.href='products.html'">Mua ngay</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="utilities-section" style="background:#e0f7fa; border-radius:10px; margin-bottom:32px; padding:32px 24px;">
+      <h3 style="color:#4ec2c2; font-size:1.5rem; margin-bottom:18px; text-align:center; font-weight:700;">Tiện ích cho khách hàng</h3>
+      <div style="display:flex; gap:32px; flex-wrap:wrap; justify-content:center;">
+        <div style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.04); padding:18px; width:220px; text-align:center;">
+          <h4 style="color:#4ec2c2;">🔍 Tìm kiếm sản phẩm</h4>
+          <p>Dễ dàng tìm kiếm sản phẩm Mixue yêu thích.</p>
+        </div>
+        <div style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.04); padding:18px; width:220px; text-align:center;">
+          <h4 style="color:#4ec2c2;">🎁 Khuyến mãi hấp dẫn</h4>
+          <p>Cập nhật các chương trình ưu đãi mới nhất.</p>
+        </div>
+        <div style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.04); padding:18px; width:220px; text-align:center;">
+          <h4 style="color:#4ec2c2;">� Theo dõi đơn hàng</h4>
+          <p>Tra cứu trạng thái đơn hàng nhanh chóng.</p>
+        </div>
+        <div style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.04); padding:18px; width:220px; text-align:center;">
+          <h4 style="color:#4ec2c2;">💬 Hỗ trợ 24/7</h4>
+          <p>Đội ngũ hỗ trợ luôn sẵn sàng giải đáp.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-section" style="background:#fff; border-radius:10px; margin-bottom:32px; padding:32px 24px;">
+      <h3 style="color:#4ec2c2; font-size:1.5rem; margin-bottom:18px; text-align:center; font-weight:700;">Hướng dẫn mua hàng</h3>
+      <div style="max-width:700px; margin:0 auto;">
+        <ol style="color:#444; font-size:1.1rem;">
+          <li>Chọn sản phẩm bạn muốn mua.</li>
+          <li>Nhấn nút "Mua ngay" hoặc "Add to cart".</li>
+          <li>Kiểm tra giỏ hàng và tiến hành thanh toán.</li>
+          <li>Nhận xác nhận đơn hàng qua email.</li>
+          <li>Chờ giao hàng tận nơi.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="promotion-section" style="background:#f9f9f9; border-radius:10px; margin-bottom:32px; padding:32px 24px;">
+      <h3 style="color:#4ec2c2; font-size:1.5rem; margin-bottom:18px; text-align:center; font-weight:700;">Khuyến mãi nổi bật</h3>
+      <div style="max-width:700px; margin:0 auto;">
+        <p><strong>08/2025:</strong> Giảm giá 20% cho khách hàng mới!</p>
+        <p><strong>07/2025:</strong> Tặng voucher 50k cho đơn hàng trên 500k.</p>
+        <p><strong>06/2025:</strong> Miễn phí vận chuyển toàn quốc.</p>
+      </div>
+    </section>
+
+    <section class="newsletter-section">
+      <h3>Đăng ký nhận tin mới</h3>
+      <input type="email" placeholder="Nhập email của bạn">
+      <button>Đăng ký</button>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" title="Facebook"><span>📘</span></a>
+        <a href="https://instagram.com" target="_blank" title="Instagram"><span>📸</span></a>
+        <a href="https://tiktok.com" target="_blank" title="TikTok"><span>🎵</span></a>
+      </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section" style="background:#f9f9f9; border-radius:10px; margin-bottom:32px; padding:32px 24px;">
+      <h3 style="color:#4ec2c2; font-size:1.5rem; margin-bottom:18px; text-align:center; font-weight:700;">Customer Feedback</h3>
+      <div style="display:flex; gap:32px; flex-wrap:wrap; justify-content:center;">
+        <div style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.04); padding:18px; width:260px;">
+          <p>"Sản phẩm MixueShop rất chất lượng, giao hàng nhanh!"</p>
+          <span style="color:#4ec2c2; font-weight:600;">- Linh, Hà Nội</span>
+        </div>
+        <div style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.04); padding:18px; width:260px;">
+          <p>"Dịch vụ hỗ trợ rất nhiệt tình, mình sẽ quay lại!"</p>
+          <span style="color:#4ec2c2; font-weight:600;">- Nam, Đà Nẵng</span>
+        </div>
+        <div style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.04); padding:18px; width:260px;">
+          <p>"Mẫu mã đa dạng, giá hợp lý, rất hài lòng."</p>
+          <span style="color:#4ec2c2; font-weight:600;">- Hương, TP.HCM</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" style="background:#fff; border-radius:10px; margin-bottom:32px; padding:32px 24px;">
+      <h3 style="color:#4ec2c2; font-size:1.5rem; margin-bottom:18px; text-align:center; font-weight:700;">Frequently Asked Questions</h3>
+      <div style="max-width:700px; margin:0 auto;">
+        <p><strong>Q: Làm sao để đặt hàng?</strong><br>A: Chọn sản phẩm, nhấn "Add to cart" và làm theo hướng dẫn thanh toán.</p>
+        <p><strong>Q: Shop có giao hàng toàn quốc không?</strong><br>A: Có, MixueShop giao hàng toàn quốc.</p>
+        <p><strong>Q: Tôi có thể đổi trả sản phẩm không?</strong><br>A: Được, vui lòng liên hệ hỗ trợ để biết chi tiết chính sách đổi trả.</p>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section" style="background:#e0f7fa; border-radius:10px; margin-bottom:32px; padding:32px 24px;">
+      <h3 style="color:#4ec2c2; font-size:1.5rem; margin-bottom:18px; text-align:center; font-weight:700;">Latest News</h3>
+      <div style="max-width:700px; margin:0 auto;">
+        <p><strong>08/2025:</strong> MixueShop ra mắt bộ sưu tập áo thun mới!</p>
+        <p><strong>07/2025:</strong> Ưu đãi giảm giá 20% cho khách hàng mới.</p>
+        <p><strong>06/2025:</strong> Thêm nhiều mẫu phụ kiện Mixue cực hot.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-column">
+      <p>📍 Address: Yen Lang, Ha Noi</p>
+      <p>📞 Phone: 0822221992</p>
+      <p>📧 Email: Mixueueshop@gmail.com</p>
+    </div>
+    <div class="footer-column">
+      <h4>POLICIES</h4>
+      <p><a href="HomePage.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="products.html">Products</a></p>
+      <p><a href="blog.html">Blog</a></p>
+      <p><a href="contact.html">Contact</a></p>
+      <p><a href="order.html">Order Lookup</a></p>
+    </div>
+    <div class="footer-column">
+      <h4>CUSTOMER SUPPORT</h4>
+      <p><a href="#">Search</a></p>
+      <p><a href="#">Privacy Policy</a></p>
+      <p><a href="#">Terms of Service</a></p>
+      <p><a href="#">Order Guide</a></p>
+    </div>
+    <div class="footer-column newsletter">
+      <h4>SUBSCRIBE</h4>
+      <input type="email" placeholder="Enter your email address">
+      <button>Subscribe</button>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" title="Facebook"><span>📘</span></a>
+        <a href="https://instagram.com" target="_blank" title="Instagram"><span>📸</span></a>
+        <a href="https://tiktok.com" target="_blank" title="TikTok"><span>🎵</span></a>
+      </div>
+    </div>
+  </footer>
+// ...existing code...
+</html>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.btn-add').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          alert('Product added to cart!');
+        });
+      });
+    });
+  </script>
 </head>
 <body>
   <!-- HEADER (from SignUP.html) -->
@@ -18,6 +906,7 @@
     </div>
     <nav class="nav-links">
       <a href="HomePage.html">Home</a>
+      <a href="Introduce.html">Introduce</a>
       <a href="profile.html">Profile</a>
       <a href="cart.html">Cart</a>
       <a href="Login.html">Login</a>
@@ -88,7 +977,11 @@
       <h4>SUBSCRIBE</h4>
       <input type="email" placeholder="Enter your email address">
       <button>Subscribe</button>
-      <div class="social-icons"></div>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" title="Facebook"><span>📘</span></a>
+        <a href="https://instagram.com" target="_blank" title="Instagram"><span>📸</span></a>
+        <a href="https://tiktok.com" target="_blank" title="TikTok"><span>🎵</span></a>
+      </div>
     </div>
   </footer>
 </body>

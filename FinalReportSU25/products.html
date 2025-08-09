@@ -4,525 +4,64 @@
   <meta charset="UTF-8">
   <title>Products | MixueShop</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-  /* --- HEADER IMPROVEMENTS --- */
-  .header-wrap {
-    background: #e0f7fa;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    border-radius: 0 0 18px 18px;
-    margin-bottom: 0;
-    padding: 0 0 8px 0;
-  }
-  .header-wrap .container,
-  .header-wrap > div {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 18px 0;
-  }
-  #logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  #logo img {
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    background: #fff;
-    padding: 2px;
-  }
-  .navigation--horizontal {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    min-width: 0;
-  }
-  .navigation-horizontal-wrapper nav ul {
-    display: flex;
-    gap: 12px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .navigation-horizontal-wrapper nav ul li {
-    position: relative;
-  }
-  .navigation-horizontal-wrapper nav ul li a.menu-item__link {
-    color: #333;
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 8px 18px;
-    border-radius: 8px;
-    transition: background 0.2s, color 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .navigation-horizontal-wrapper nav ul li a.menu-item__link.active,
-  .navigation-horizontal-wrapper nav ul li a.menu-item__link:hover {
-    background: #4ec2c2;
-    color: #fff;
-  }
-  .navigation-horizontal-wrapper nav ul li .submenu {
-    position: absolute;
-    left: 0;
-    top: 110%;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-    min-width: 180px;
-    z-index: 10;
-    padding: 8px 0;
-  }
-  .submenu__list.container {
-    padding: 0;
-  }
-  .submenu__item a.link {
-    display: block;
-    padding: 8px 18px;
-    color: #333;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background 0.2s, color 0.2s;
-  }
-  .submenu__item a.link:hover {
-    background: #e0f7fa;
-    color: #4ec2c2;
-  }
-  .header-right {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-  }
-  .header-icon {
-    cursor: pointer;
-    font-size: 20px;
-    color: #4ec2c2;
-    background: #fff;
-    border-radius: 50%;
-    padding: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    transition: background 0.2s;
-  }
-  .header-icon:hover {
-    background: #4ec2c2;
-    color: #fff;
-  }
-  .account-action a {
-    display: block;
-    padding: 8px 12px;
-    color: #333;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background 0.2s, color 0.2s;
-  }
-  .account-action a:hover {
-    background: #e0f7fa;
-    color: #4ec2c2;
-  }
-  .wishlist-link {
-    font-size: 22px;
-    color: #e53935;
-    position: relative;
-    background: #fff;
-    border-radius: 50%;
-    padding: 6px 10px;
-    box-shadow: 0 2px 8px rgba(229,57,53,0.08);
-    transition: background 0.2s;
-  }
-  .wishlist-link:hover {
-    background: #e53935;
-    color: #fff;
-  }
-  .mini-cart .header-icon.cart-count {
-    color: #4ec2c2;
-    font-size: 20px;
-    position: relative;
-    background: #fff;
-    border-radius: 50%;
-    padding: 6px 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    transition: background 0.2s;
-  }
-  .mini-cart .header-icon.cart-count:hover {
-    background: #4ec2c2;
-    color: #fff;
-  }
-  .count_item, .count_item_pr {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background: #e53935;
-    color: #fff;
-    border-radius: 50%;
-    font-size: 12px;
-    padding: 2px 6px;
-  }
-  .header-wrap .position-relative.d-block {
-    background: #e53935;
-    color: #fff;
-    font-weight: 700;
-    border-radius: 8px;
-    padding: 8px 18px;
-    text-decoration: none;
-    margin-left: 18px;
-    box-shadow: 0 2px 8px rgba(229,57,53,0.08);
-    transition: background 0.2s;
-    display: inline-block;
-  }
-  .header-wrap .position-relative.d-block:hover {
-    background: #b71c1c;
-    color: #fff;
-  }
-  @media (max-width: 900px) {
-    .header-wrap > div, .header-wrap .container {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 12px 0;
-    }
-    .navigation--horizontal {
-      width: 100%;
-      gap: 8px;
-    }
-    .header-right {
-      width: 100%;
-      justify-content: flex-start;
-      gap: 12px;
-    }
-  }
-    .products-container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 24px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    }
-    .products-title {
-      color: #4ec2c2;
-      font-size: 2rem;
-      margin-bottom: 28px;
-      text-align: center;
-      font-weight: 700;
-    }
-    .products-list {
-      display: flex;
-      gap: 32px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .product-card {
-      background: #f9f9f9;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-      padding: 18px;
-      width: 220px;
-      text-align: center;
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-    .product-card:hover {
-      box-shadow: 0 6px 18px rgba(0,0,0,0.10);
-      transform: translateY(-4px) scale(1.04);
-    }
-    .product-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 6px;
-      margin-bottom: 12px;
-    }
-    .product-name {
-      margin: 12px 0 6px 0;
-      font-size: 18px;
-      font-weight: 600;
-      color: #333;
-    }
-    .product-price {
-      color: #4ec2c2;
-      font-weight: 600;
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
-    .btn-add {
-      background: #4ec2c2;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      padding: 8px 18px;
-      font-size: 15px;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .btn-add:hover {
-      background: #369b9b;
-      transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    @media (max-width: 700px) {
-      .products-list {
-        gap: 16px;
-      }
-      .product-card {
-        width: 100%;
-        max-width: 320px;
-      }
-      .products-container {
-        padding: 8px;
-      }
-    }
-    .social-icons {
-      margin-top: 10px;
-      display: flex;
-      gap: 12px;
-    }
-    .social-icons a {
-      display: inline-block;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: #e0f7fa;
-      text-align: center;
-      line-height: 28px;
-      color: #4ec2c2;
-      font-size: 18px;
-      transition: background 0.2s;
-    }
-    .social-icons a:hover {
-      background: #4ec2c2;
-      color: #fff;
-    }
-    /* Header & Navigation Styles */
-    header {
-      background: #e0f7fa;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-      border-radius: 0 0 16px 16px;
-      margin-bottom: 0;
-    }
-    header .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-    header nav ul {
-      display: flex;
-      gap: 24px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    header nav ul li a {
-      color: #333;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 1rem;
-      padding: 8px 18px;
-      border-radius: 6px;
-      transition: background 0.2s, color 0.2s;
-      display: inline-block;
-    }
-    header nav ul li a:hover, header nav ul li a.active {
-      background: #4ec2c2;
-      color: #fff;
-    }
-    header nav ul li a.active {
-      font-weight: 700;
-    }
-    @media (max-width: 700px) {
-      header .logo-area span {
-        font-size: 1.2rem;
-      }
-      header nav ul {
-        gap: 8px;
-      }
-      header nav ul li a {
-        padding: 6px 10px;
-        font-size: 0.95rem;
-      }
-    }
-    /* Breadcrumb Styles */
-    .breadcrumb {
-      background: #f9f9f9;
-      border-radius: 0 0 10px 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-      padding: 12px 0;
-      margin-bottom: 18px;
-    }
-    .breadcrumb div {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 1rem;
-      color: #888;
-    }
-    .breadcrumb a {
-      color: #4ec2c2;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.2s;
-    }
-    .breadcrumb a:hover {
-      color: #e53935;
-    }
-    .breadcrumb .active {
-      color: #4ec2c2;
-      font-weight: 700;
-    }
-  </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.btn-add').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          alert('Product added to cart!');
-        });
-      });
-    });
-  </script>
+  <link rel="stylesheet" href="productsTrangTri.css">
+  <script src="cartHandler.js"></script>
+  <script src="productsPage.js"></script>
 </head>
 <body>
-  <div class="header-wrap container">
-    <div class="toggle-nav btn menu-bar mr-4 ml-0 p-0  d-lg-none d-flex text-white">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-    <div id="logo">
-      <a href="/" class="logo-wrapper ">
-        <img class="img-fluid" src="//theme.hstatic.net/200000881795/1001243022/14/logo.png?v=167" alt="logo MixiShop" width="134" height="45">
-      </a>
-    </div>
-    <div class="navigation--horizontal d-lg-flex align-items-center d-none">
-      <div class=" navigation-wrapper navigation-horizontal-wrapper ">
-        <nav>
-          <ul class="navigation navigation-horizontal list-group list-group-flush scroll">
-            <li class="menu-item list-group-item">
-              <a href="/" class="menu-item__link" title="Trang chủ" style="transform: translateY(0%);">
-                <span>Trang chủ</span>
-              </a>
-            </li>
-            <li class="menu-item list-group-item">
-              <a href="/pages/about-us" class="menu-item__link" title="Giới thiệu" style="transform: translateY(0%);">
-                <span>Giới thiệu</span>
-              </a>
-            </li>
-            <li class="menu-item list-group-item">
-              <a href="/collections/all" class="menu-item__link" title="Sản phẩm" style="transform: translateY(0%);">
-                <img src="//theme.hstatic.net/200000881795/1001243022/14/menu_icon_3.png?v=167" alt="Sản phẩm">
-                <span>Sản phẩm</span>
-                <i class="float-right" data-toggle-submenu="">
-                  <svg class="icon">
-                    <use xlink:href="#icon-arrow"></use>
-                  </svg>
-                </i>
-              </a>
-              <div class="submenu scroll  default ">
-                <div class="toggle-submenu d-lg-none d-xl-none">
-                  <i class="mr-3">
-                    <svg class="icon" style="transform: rotate(180deg)">
-                      <use xlink:href="#icon-arrow"></use>
-                    </svg>
-                  </i>
-                  <span>Sản phẩm </span>
-                </div>
-                <ul class="submenu__list container">
-                  <li class="submenu__item "><a class="link" href="/collections/do-xuan-he" title="Đồ xuân hè">Đồ xuân hè</a></li>
-                  <li class="submenu__item "><a class="link" href="/collections/do-thu-dong" title="Đồ thu đông">Đồ thu đông</a></li>
-                  <li class="submenu__item "><a class="link" href="/collections/coc-binh" title="Cốc bình">Cốc bình</a></li>
-                  <li class="submenu__item "><a class="link" href="/collections/lego" title="Lego">Lego</a></li>
-                  <li class="submenu__item "><a class="link" href="/collections/giay-dep" title="Giày dép">Giày dép</a></li>
-                  <li class="submenu__item "><a class="link" href="/collections/do-luu-niem" title="Đồ lưu niệm">Đồ lưu niệm</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="menu-item list-group-item">
-              <a href="/blogs/news" class="menu-item__link" title="Blog" style="transform: translateY(0%);">
-                <span>Blog</span>
-              </a>
-            </li>
-            <li class="menu-item list-group-item">
-              <a href="/pages/lien-he" class="menu-item__link" title="Liên hệ" style="transform: translateY(0%);">
-                <span>Liên hệ</span>
-              </a>
-            </li>
-            <li class="menu-item list-group-item">
-              <a href="/pages/huong-dan-kiem-tra-don-hang" class="menu-item__link" title="Kiểm tra đơn hàng" style="transform: translateY(0%);">
-                <span>Kiểm tra đơn hàng</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+  <div class="top-banner" style="background:#4ec2c2; color:#fff; text-align:center; padding:10px 0; font-size:1.1rem; font-weight:600; letter-spacing:1px;">OFFICIAL WEBSITE OF MIXUESHOP</div>
+  <header class="header" style="background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.07); padding:0;">
+    <div class="container" style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;">
+      <div class="logo" style="display:flex; align-items:center;">
+        <a href="HomePage.html"><img src="images/logo.png" alt="MixueShop Logo" style="height:54px;" /></a>
       </div>
-      <div class=" navigation-arrows ">
-        <i class="fas fa-chevron-left prev disabled"></i>
-        <i class="fas fa-chevron-right next disabled"></i>
-      </div>
-    </div>
-    <div class="header-right ega-d--flex">
-      <div class="icon-action header-right__icons" style="--header-grid-template: repeat(4, 1fr);">
-        <span class="header-icon icon-action__search icon-action__search--desktop toggle_form_search">
-          <svg class="icon">
-            <use xlink:href="#icon-search"></use>
-          </svg>
-        </span>
-        <div id="icon-account" class="ega-color--inherit header-icon icon-account d-none d-md-block d-lg-block">
-          <svg class="icon">
-            <use xlink:href="#icon-user"></use>
-          </svg>
-          <div class="account-action">
-            <a href="/account/login" title="Đăng nhập">Đăng nhập</a>
-            <a href="/account/register" title="Đăng ký">Đăng ký</a>
-          </div>
-        </div>
-        <!-- Wish list -->
-        <a href="/pages/wishlist" class="wishlist-link" title="Sản phẩm yêu thích" style="font-size: 22px;">
-          <i class="far fa-heart" style="vertical-align: top"></i>
-          <span>3</span>
-        </a>
-        <!-- End Wish list -->
-        <div class="mini-cart text-xs-center">
-          <a class="header-icon cart-count ega-color--inherit" href="/cart" title="Giỏ hàng">
-            <svg class="icon">
-              <use xlink:href="#icon-cart"></use>
-            </svg>
-            <span class="count_item count_item_pr">0</span>
+      <nav class="nav-links" style="display:flex; gap:32px; align-items:center;">
+        <a href="HomePage.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; transition:background 0.2s;">Trang chủ</a>
+        <a href="about.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; transition:background 0.2s;">Giới thiệu</a>
+        <div class="menu-item--has-submenu" style="position:relative;">
+          <a href="products.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; display:flex; align-items:center; gap:6px; transition:background 0.2s;">
+            <img src="images/menu_icon_3.png" alt="Sản phẩm" style="height:18px; vertical-align:middle; margin-right:2px;" />
+            Sản phẩm <span style="font-size:12px;">▼</span>
           </a>
-          <div class="top-cart-content card ">
-            <ul id="cart-sidebar" class="mini-products-list count_li list-unstyled"><div class="no-item"><p>Không có sản phẩm nào.</p></div></ul>
-          </div>
+          <ul class="submenu__list" style="position:absolute; left:0; top:100%; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.08); border-radius:8px; min-width:160px; display:none; z-index:10; padding:8px 0; margin-top:4px;">
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Đồ xuân hè</a></li>
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Đồ thu đông</a></li>
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Cốc bình</a></li>
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Lego</a></li>
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Giày dép</a></li>
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Đồ lưu niệm</a></li>
+          </ul>
         </div>
+        <a href="blog.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; transition:background 0.2s;">Blog</a>
+        <a href="contact.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; transition:background 0.2s;">Liên hệ</a>
+        <a href="order.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; transition:background 0.2s;">Kiểm tra đơn hàng</a>
+      </nav>
+      <div class="header-right" style="display:flex; align-items:center; gap:18px;">
+        <a href="#" title="Tìm kiếm" style="color:#4ec2c2; font-size:22px; background:#e0f7fa; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; transition:background 0.2s;"><span>🔍</span></a>
+        <a href="Login.html" title="Tài khoản" style="color:#4ec2c2; font-size:22px; background:#e0f7fa; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; transition:background 0.2s;"><span>👤</span></a>
+        <a href="cart.html" title="Giỏ hàng" style="color:#4ec2c2; font-size:22px; background:#e0f7fa; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; position:relative; transition:background 0.2s;">
+          <span>🛒</span>
+          <span class="cart-badge" style="position:absolute; top:-6px; right:-6px; background:#ff5252; color:#fff; border-radius:50%; font-size:12px; padding:2px 6px;">0</span>
+        </a>
+        <a href="#" title="Yêu thích" style="color:#4ec2c2; font-size:22px; background:#e0f7fa; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; transition:background 0.2s;"><span>❤</span></a>
       </div>
     </div>
-  </div>
-  <script>
-    // Show/hide submenu on hover
-    document.addEventListener('DOMContentLoaded', function() {
-      var productMenu = document.querySelector('.menu-item.position-relative');
-      var submenu = productMenu.querySelector('.submenu');
-      productMenu.addEventListener('mouseenter', function() {
-        submenu.style.display = 'block';
+    <script>
+      // Hiển thị submenu khi hover
+      document.addEventListener('DOMContentLoaded', function() {
+        var menuItem = document.querySelector('.menu-item--has-submenu');
+        var submenu = menuItem && menuItem.querySelector('.submenu__list');
+        if(menuItem && submenu) {
+          menuItem.addEventListener('mouseenter', function() {
+            submenu.style.display = 'block';
+          });
+          menuItem.addEventListener('mouseleave', function() {
+            submenu.style.display = 'none';
+          });
+        }
       });
-      productMenu.addEventListener('mouseleave', function() {
-        submenu.style.display = 'none';
-      });
-      // Show/hide account dropdown
-      var accountIcon = document.getElementById('icon-account');
-      var accountAction = accountIcon.querySelector('.account-action');
-      accountIcon.addEventListener('mouseenter', function() {
-        accountAction.style.display = 'block';
-      });
-      accountIcon.addEventListener('mouseleave', function() {
-        accountAction.style.display = 'none';
-      });
-    });
-  </script>
+    </script>
+  </header>
   <!-- Breadcrumb -->
   <nav class="breadcrumb">
     <div>
@@ -640,13 +179,13 @@
             <button class="btn-add">Add to cart</button>
           </div>
           <div class="product-card">
-            <img src="images/product2.jpg" alt="Mixue Pants">
+            <img src="images/product2.jpg.png" alt="Mixue Pants">
             <div class="product-name">Mixue Jogger Pants</div>
             <div class="product-price">400,000₫</div>
             <button class="btn-add">Add to cart</button>
           </div>
           <div class="product-card">
-            <img src="images/product3.jpg" alt="Accessories">
+            <img src="images/product3.jpg.png" alt="Accessories">
             <div class="product-name">Accessories</div>
             <div class="product-price">120,000₫</div>
             <img src="images/product4.jpg" alt="Sets">

@@ -1,14 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Đồ xuân hè | MixueShop</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!--#include file="header.html" -->
-  <!--#include file="breadcrumb.html" -->
-  <script>document.querySelector('.breadcrumb .active span').textContent = 'Đồ xuân hè';</script>
+  <!-- HEADER -->
+  <div class="top-banner" style="background:#4ec2c2; color:#fff; text-align:center; padding:10px 0; font-size:1.1rem; font-weight:600; letter-spacing:1px;">OFFICIAL WEBSITE OF MIXUESHOP</div>
+  <header class="header" style="background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.07); padding:0;">
+    <div class="container" style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;">
+      <div class="logo" style="display:flex; align-items:center;">
+        <a href="HomePage.html"><img src="images/logo.png" alt="MixueShop Logo" style="height:54px;" /></a>
+      </div>
+      <nav class="nav-links" style="display:flex; gap:32px; align-items:center;">
+        <a href="HomePage.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; transition:background 0.2s;">Trang chủ</a>
+        <a href="about.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; transition:background 0.2s;">Giới thiệu</a>
+        <div class="menu-item--has-submenu" style="position:relative;">
+          <a href="products.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; display:flex; align-items:center; gap:6px; transition:background 0.2s;">
+            <img src="images/menu_icon_3.png" alt="Sản phẩm" style="height:18px; vertical-align:middle; margin-right:2px;" />
+            Sản phẩm <span style="font-size:12px;">▼</span>
+          </a>
+          <ul class="submenu__list" style="position:absolute; left:0; top:100%; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.08); border-radius:8px; min-width:160px; display:none; z-index:10; padding:8px 0; margin-top:4px;">
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Đồ xuân hè</a></li>
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Đồ thu đông</a></li>
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Cốc bình</a></li>
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Lego</a></li>
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Giày dép</a></li>
+            <li><a class="link" href="#" style="display:block; padding:8px 18px; color:#369b9b; text-decoration:none;">Đồ lưu niệm</a></li>
+          </ul>
+        </div>
+        <a href="blog.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; transition:background 0.2s;">Blog</a>
+        <a href="contact.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; transition:background 0.2s;">Liên hệ</a>
+        <a href="order.html" style="color:#4ec2c2; text-decoration:none; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:6px; transition:background 0.2s;">Kiểm tra đơn hàng</a>
+      </nav>
+      <div class="header-right" style="display:flex; align-items:center; gap:18px;">
+        <a href="#" title="Tìm kiếm" style="color:#4ec2c2; font-size:22px; background:#e0f7fa; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; transition:background 0.2s;"><span>🔍</span></a>
+        <a href="Login.html" title="Tài khoản" style="color:#4ec2c2; font-size:22px; background:#e0f7fa; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; transition:background 0.2s;"><span>👤</span></a>
+        <a href="cart.html" title="Giỏ hàng" style="color:#4ec2c2; font-size:22px; background:#e0f7fa; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; position:relative; transition:background 0.2s;">
+          <span>🛒</span>
+          <span style="position:absolute; top:-6px; right:-6px; background:#ff5252; color:#fff; border-radius:50%; font-size:12px; padding:2px 6px;">0</span>
+        </a>
+        <a href="#" title="Yêu thích" style="color:#4ec2c2; font-size:22px; background:#e0f7fa; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; transition:background 0.2s;"><span>❤</span></a>
+      </div>
+    </div>
+    <script>
+      // Hiển thị submenu khi hover
+      document.addEventListener('DOMContentLoaded', function() {
+        var menuItem = document.querySelector('.menu-item--has-submenu');
+        var submenu = menuItem && menuItem.querySelector('.submenu__list');
+        if(menuItem && submenu) {
+          menuItem.addEventListener('mouseenter', function() {
+            submenu.style.display = 'block';
+          });
+          menuItem.addEventListener('mouseleave', function() {
+            submenu.style.display = 'none';
+          });
+        }
+      });
+    </script>
+  </header>
   <main class="main-content">
     <div class="products-container">
       <h2 class="products-title">Đồ xuân hè</h2>
